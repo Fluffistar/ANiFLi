@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:background="@color/black"
+    tools:context=".Videoplayer">
+
+
+
+          <VideoView
+              android:clickable="false"
+              android:id="@+id/videoplayer2"
+              android:layout_width="match_parent"
+
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_alignParentEnd="true"
+              android:layout_alignParentBottom="true"
+              android:layout_alignParentTop="true"
+              android:nextFocusUp="@id/languagecombo"
+              android:nextFocusDown="@id/playbtn"
+              android:focusable="false"
+              android:focusableInTouchMode="false"
+              android:layout_gravity="center"
+              />
+
+
+
+          <com.google.android.material.card.MaterialCardView
+              app:cardElevation="26dp"
+              android:id="@+id/topbar"
+              android:focusable="false"
+              android:focusableInTouchMode="false"
+              android:clickable="false"
+              android:hapticFeedbackEnabled="false"
+              android:orientation="vertical"
+              android:layout_margin="5dp"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              app:strokeWidth="2dp"
+              app:rippleColor="@android:color/transparent"
+              app:strokeColor="@color/maincolor"
+              android:background="#801C1C1C">
+               <RelativeLayout
+                   android:focusable="false"
+                   android:focusableInTouchMode="false"
+                   android:layout_width="match_parent"
+                   android:layout_height="50dp"
+                   android:layout_margin="2dp"
+                   android:background="#801C1C1C">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/backbtn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:icon="@drawable/ic_back"
+                        app:iconTint="@color/white"
+                        app:iconSize="50dp"
+                        app:iconPadding="0dp"
+                        android:paddingLeft="0dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/title_videoplayer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toStartOf="@+id/languagecombo"
+                        android:layout_toEndOf="@id/backbtn"
+                        android:gravity="center_vertical"
+                        android:text="Title"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/languagecombo"
+                        android:layout_width="wrap_content"
+                        android:contentDescription="set language"
+                        android:background="@drawable/spinner_background"
+
+                        android:nextFocusRight="@id/Hostercombo"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/Hostercombo" />
+
+                    <Spinner
+                        android:id="@+id/Hostercombo"
+                        android:layout_width="wrap_content"
+                        android:contentDescription="set Hoster"
+                        android:background="@drawable/spinner_background"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/openwith" />
+
+                   <com.google.android.material.button.MaterialButton
+                       android:id="@+id/openwith"
+                       android:layout_width="25dp"
+                       android:layout_height="match_parent"
+                       android:layout_alignParentEnd="true"
+                       android:layout_marginEnd="10dp"
+                       android:paddingStart="0dp"
+                       app:icon="@drawable/ic_more"
+                       app:iconPadding="0dp"
+                       app:iconSize="25dp"
+                       app:iconTint="@color/white"
+                       tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
+               </RelativeLayout>
+          </com.google.android.material.card.MaterialCardView>
+
+          <com.google.android.material.card.MaterialCardView
+              android:id="@+id/bottombar"
+              android:clickable="false"
+              android:layout_alignParentBottom="true"
+              android:hapticFeedbackEnabled="false"
+              app:rippleColor="@android:color/transparent"
+              android:layout_gravity="bottom"
+              android:layout_marginBottom="0dp"
+              android:orientation="horizontal"
+              android:layout_margin="5dp"
+              android:layout_width="match_parent"
+              android:layout_height="100dp"
+              android:focusable="false"
+              android:focusableInTouchMode="false"
+              android:background="#801C1C1C">
+               <RelativeLayout
+
+                   android:focusable="false"
+                   android:focusableInTouchMode="false"
+                   android:layout_width="match_parent"
+                   android:background="#801C1C1C"
+                   android:layout_height="match_parent"
+
+                   android:orientation="horizontal"
+                   android:padding="10dp"
+                   >
+                    <TextView
+                        android:id="@+id/firsttext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:textColor="@color/white"
+                        android:text="00:00:00"
+                        android:layout_marginRight="5dp"
+                        />
+                    <TextView
+                        android:id="@+id/secondtext"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:textColor="@color/white"
+                        android:text="00:00:00"
+                        android:layout_marginRight="5dp"
+                        />
+                    <SeekBar
+                        android:id="@+id/seekbar"
+                        android:layout_toRightOf="@id/firsttext"
+                        android:layout_toLeftOf="@id/secondtext"
+                        style="@style/Base.Widget.AppCompat.SeekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:progressBackgroundTint="@color/white"
+
+                        android:background="@drawable/cardview_strokecolor"
+                        android:nextFocusDown="@id/playbtn"
+                        />
+                    <com.google.android.material.button.MaterialButton
+
+                        android:id="@+id/skipbackward"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:height="50dp"
+                        android:layout_marginRight="10dp"
+                        app:icon="@drawable/ic_backward"
+                        android:layout_below="@id/seekbar"
+                        android:layout_toLeftOf="@id/playbtn"
+                        app:iconTint="@color/white"
+                        app:iconSize="50dp"
+                        app:iconPadding="0dp"
+                        android:paddingLeft="0dp"
+                        />
+
+                   <com.google.android.material.button.MaterialButton
+                       android:id="@+id/playbtn"
+                       android:layout_width="50dp"
+                       android:layout_height="50dp"
+                       android:layout_below="@id/seekbar"
+                       android:layout_centerInParent="true"
+                       android:layout_marginRight="10dp"
+                       android:paddingLeft="0dp"
+                       app:icon="@drawable/ic_play"
+                       app:iconPadding="0dp"
+                       app:iconSize="50dp"
+                       app:iconTint="@color/white" />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/nextbtn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/seekbar"
+                        android:layout_alignParentRight="true"
+                        app:icon = "@drawable/ic_next"
+                        app:iconTint="@color/white"
+                        app:iconSize="50dp"
+                        app:iconPadding="0dp"
+                        android:paddingLeft="0dp"
+                        />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/skipforward"
+                        android:layout_toRightOf="@id/playbtn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:height="50dp"
+
+                        android:layout_below="@id/seekbar"
+                        android:gravity="center"
+                        app:icon="@drawable/ic_forward"
+                        app:iconTint="@color/white"
+                        app:iconSize="50dp"
+                        app:iconPadding="0dp"
+                        android:paddingLeft="0dp"
+
+                        />
+
+               </RelativeLayout>
+          </com.google.android.material.card.MaterialCardView>
+
+
+          <WebView
+
+              android:id="@+id/webview"
+              android:layout_width="match_parent"
+
+              android:layout_height="match_parent"
+
+              android:layout_gravity="center"
+              android:layout_marginStart="50dp"
+              android:layout_marginTop="50dp"
+              android:layout_marginEnd="50dp"
+              android:layout_marginBottom="50dp"
+              android:visibility="gone" />
+
+
+
+
+</RelativeLayout >

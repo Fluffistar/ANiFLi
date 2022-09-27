@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF1C1C1C"
+
+    tools:context=".ui.Search.SearchFragment">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+android:layout_margin="5dp"
+                    android:id="@+id/searchbox_border"
+
+                    android:nextFocusRight="@id/searchbtn"
+                    android:gravity="center"
+                    android:layout_toLeftOf="@id/searchbtn">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/searchbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:completionThreshold="3"
+                        app:textInputLayoutFocusedRectEnabled="false"
+                        android:background="@color/orange"
+                        android:nextFocusForward="@id/searchbtn"
+                        android:hint="Search"
+                        android:inputType="textAutoComplete" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/searchbtn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    app:icon="@drawable/ic_search"
+                    app:iconSize="40dp"
+                    android:paddingLeft="5dp"
+                    android:theme="@style/Theme.Design"
+                     android:layout_margin="20dp"
+                    />
+
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_below="@id/searchbox_border">
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/searchepilist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</androidx.core.widget.NestedScrollView>
+
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:progressDrawable="@drawable/circular_progress_bar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+
+        />
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="@color/maincolor"
+    app:cardElevation="16dp"
+    app:strokeWidth="2dp"
+    app:strokeColor="@color/maincolor"
+    android:layout_height="100dp">
+    <RelativeLayout
+        android:layout_margin="2dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/img_episode"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:layout_alignParentLeft="true"
+            tools:srcCompat="@drawable/ic_launcher_background"/>
+
+
+            <TextView
+                android:layout_toRightOf="@id/img_episode"
+                android:id="@+id/title_Episode"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:textSize="16dp"
+                android:layout_gravity="top"
+                android:textColor="@color/white"
+
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:text="TITLE" />
+            <TextView
+                android:layout_below="@id/title_Episode"
+                android:layout_toRightOf="@id/img_episode"
+                android:id="@+id/text_Episode"
+                android:layout_height="match_parent"
+
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:text="Serie"
+                android:textColor="@color/white"
+
+
+
+                />
+
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

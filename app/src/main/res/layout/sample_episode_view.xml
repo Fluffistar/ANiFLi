@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="horizontal"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingLeft="8dp"
+    android:background="#FF1C1C1C"
+    >
+
+    <ImageView
+        android:id="@+id/img_episode"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:paddingRight="5dp"
+        android:scaleType="fitXY"
+        tools:srcCompat="@drawable/ic_launcher_background"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/title_Episode"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textSize="16dp"
+            android:layout_gravity="top"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:text="TITLE" />
+        <TextView
+            android:id="@+id/text_Episode"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:text="Serie"
+            android:textColor="@color/gray_400"
+
+
+
+            />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
