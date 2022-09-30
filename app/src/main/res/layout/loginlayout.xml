@@ -10,18 +10,22 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="20dp"
         android:layout_marginHorizontal="30sp">
 
-        <TextView
+        <ImageView
             android:id="@+id/login_txt_title"
             android:textColor="@color/white"
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="300dp"
+            android:scaleX="3.8"
+            android:scaleY="4"
+            android:layout_height="100dp"
             android:layout_centerHorizontal="true"
             android:layout_alignParentTop="true"
             android:text="@string/netfliunderline"
+
+            android:src="@drawable/anili_icon_png"
             android:textSize="40sp" />
 
         <TextView
@@ -41,11 +45,13 @@
             android:layout_below="@+id/login_txt_subtitle"
             android:layout_marginTop="35sp"
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content">
-            android:textColor="@color/white"
+
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/orange"
 
                 android:hint="Email"
                 android:inputType="textEmailAddress" />
@@ -65,6 +71,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
+                android:background="@color/orange"
+
 
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -76,6 +84,7 @@
 
             android:layout_below="@+id/login_txt_forgot_pw"
             android:backgroundTint="@color/orange"
+            android:textColor="@color/black"
             android:layout_marginTop="30sp"
             android:paddingVertical="15sp"
             android:text="Login" />
@@ -96,8 +105,9 @@
             android:id="@+id/login_txt_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/login_btn"
-            android:layout_marginTop="30sp"
+            android:layout_below="@+id/login_txt_input_pw"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15sp"
             android:layout_centerHorizontal="true"
             android:text="@string/registration"
 

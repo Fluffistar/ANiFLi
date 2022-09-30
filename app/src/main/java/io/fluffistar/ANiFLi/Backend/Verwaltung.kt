@@ -320,7 +320,7 @@ class Verwaltung {
 
         fun getUpdate(context: Context) : Pair<Boolean,String>   {
 
-             val  result = Fuel.get("https://api.github.com/repos/Fluffistar/NEtFLi-Android/releases").header("User-Agent","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36").responseString ()
+             val  result = Fuel.get("https://api.github.com/repos/Fluffistar/ANiFLi/releases").header("User-Agent","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36").responseString ()
 
             when(result.third){
                 is Result.Failure -> {
